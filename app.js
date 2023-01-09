@@ -37,6 +37,19 @@ class Teacher extends User {
     }
 }
 
+class Student extends User {
+    constructor(firstName,lastName,email,location,wifiNetwork,id,gradYear,schedule) {
+        super(firstName,lastName,email,location,wifiNetwork)
+        this.id = id;
+        this.gradYear = gradYear;
+        this.schedule = schedule;
+    }
+
+    get studentInfo(){
+        return `${this._firstName} ${this._lastName}: ${this.id} - Graduation Year: ${this.gradYear}`
+    }
+}
+
 //Users
 
 const tim = new User('Tim','G','timg@gm.edu','High School');
@@ -52,3 +65,9 @@ console.log(hoge.roster)
 console.log(hoge._vmAccess)
 hoge.vmAccess = false;
 console.log(hoge._vmAccess)
+
+//Students
+
+const parker = new Student('Parker','Schreffler','parkerscreffler@gm.edu','Mckean','GM Student',00015,2032,['Math,Language Arts','Special','Reading','Science'])
+
+console.log(parker.studentInfo)
