@@ -52,3 +52,5 @@ console.log(hoge.roster)
 console.log(hoge._vmAccess)
 hoge.vmAccess = false;
 console.log(hoge._vmAccess)
+
+//Students
